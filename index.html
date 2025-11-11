@@ -6,12 +6,19 @@
     <title>Blog personal de David Ayo</title>
     <link rel="icon" href="img/ICONO D LA PAGINA.png" type="image/png">
     <link rel="stylesheet" href="hojaestilos.css">
+    <LINK rel="stylesheet" href="tarjetas.css">
+
+    
 </head>
 
 <body>
-    <header>
-        <h1>Blog David Ayo</h1>
+  
         <nav class="menu">
+
+          <input type="checkbox" id="menu-toggle">
+          <label for="menu-toggle" class="menu-icon">☰</label>
+
+        
             <ul>
                 <li><a href="index.html" class="activo">Inicio</a></li>
                 <li><a href="estudios.html">Estudios</a></li>
@@ -20,40 +27,87 @@
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
-    </header>
 
-    <main>
-      <section id="Bienvenida">
-       
-        <p>
-          Bienvenido a mi blog personal, 
-          un espacio donde comparto mis proyectos, estudios, 
-          hobbies y formas de contacto
-        </p>
+        <div class="fondo-video">
+  <video autoplay muted loop playsinline>
+    <source src="videos/fondo.image1.mp4" type="video/mp4">
+  </video>
 
-      </section>
-      
-      <section id="Primer proyextos">
+  <div class="texto-overlay">
+    <p>UNIVERSIDAD POLITECNICA SALESIANA</p>
+    <h3>Blog Personal - David Ayo</h3>
+    <p>DISEÑO Y CREACION DE PAGINAS WEB</p>
+  </div>
+</div>
 
 
-        <article>
-      <section id="Mi ultimo viaje"></section>
-         <h3>      ULTIMO VIAJE    </h3>
-        <h3>    ---- CUENCA ----   </h3>
-        <img src="img/cuenca.jpg">
-        
-        <h3> --- VACACIONES ---</h3>
-        <p> - 25 DE AGOSTO DEL 2025 </p>
-        <h3>  MIRADOR DEL TURI </h3>
-        <img src="img/miradorturi.jpg">
 
-        <a href="hobbies.html">Leer más....</a>
-        
-        </article>
+<!-- =================== VIAJES =================== -->
+<section class="seccion">
+  <h2>Viajes</h2>
 
-      </section>
-    
+  <div class="cards-container">
 
+    <div class="card">
+      <h3>Quito</h3>
+      <p>Un viaje inolvidable con paisajes hermosos.</p>
+    </div>
+
+    <div class="card">
+      <h3>Cuenca</h3>
+      <p>Ciudad colonial con mucha historia.</p>
+    </div>
+
+    <div class="card">
+      <h3>Baños</h3>
+      <p>Un lugar para relajarse y disfrutar la naturaleza.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- =================== PROYECTOS =================== -->
+<section class="seccion">
+  <h2>Proyectos</h2>
+
+  <div class="cards-container">
+
+    <div class="card">
+      <h3>Aplicación Cafetería UPS</h3>
+      <p>Proyecto para mejorar pedidos en campus.</p>
+    </div>
+
+    <div class="card">
+      <h3>CRM 4R Global Leads</h3>
+      <p>Sistema para automatizar ventas y marketing.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- =================== ESTUDIOS =================== -->
+<section class="seccion">
+  <h2>Estudios</h2>
+
+  <div class="cards-container">
+
+    <div class="card">
+      <h3>Negocios Digitales</h3>
+      <p>Universidad Politécnica Salesiana</p>
+    </div>
+
+    <div class="card">
+      <h3>Curso Marketing Digital</h3>
+      <p>Google, Meta Ads y automatización.</p>
+    </div>
+
+    <div class="card">
+      <h3>Diseño Web</h3>
+      <p>HTML, CSS y diseño UI básico.</p>
+    </div>
+
+  </div>
+</section>
 
     </main>
   </body>

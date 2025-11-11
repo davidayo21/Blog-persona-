@@ -1,75 +1,153 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-}
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(122, 195, 218);
-    color: #333;
-
-
-    background-image:
-    url('img/fondepagima.jpg');
-
-     background-size: cover;
-
-     background-position:
-     center;
-}
-
-h1{
-
-  color: beige;
-  background-color: black;
-  text-align: center;  
-
-
-}body {
-  font-family: Arial, sans-serif;
+/* Reset general */
+* {
   margin: 0;
-  background-color: #f9f9f9;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-header {
-    
-  background-color: #333;
-  color: white;
-  padding: 1em 0;
-  text-align: center;
-}
 
-.menu ul {
-  list-style: none;
-  background-color: #444;
-  padding: 0;
-  margin: 0;
+/* VIDEO DE FONDO */
+.fondo-video {
+  position: relative;
+  height: 500px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-.menu li {
-  margin: 0 40px;
+.fondo-video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
-.menu a {
+/* TEXTO ENCIMA DEL VIDEO */
+.texto-overlay {
+  text-align: center;
   color: white;
+  font-weight: 600;
+  z-index: 10;
+}
+
+.texto-overlay h3 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.texto-overlay p {
+  font-size: 22px;
+}
+
+/* MENÚ HORIZONTAL SOBRE EL VIDEO */
+.menu {
+  position: absolute;
+  top: 25px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  backdrop-filter: relative(750px);
+ 
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  z-index: 20;
+}
+
+/* Lista horizontal */
+.menu ul {
+ list-style: none;
+  display: flex;
+  gap: 60px;
+  padding: 12px 30px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  
+}
+
+.menu ul li {
+  position: relative;
+  
+}
+
+/* Links del menú */
+.menu ul li a {
+  color: rgb(19, 10, 10);
   text-decoration: none;
-  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  padding: 8px 12px;
+  position: relative;
+  transition: 0.9s ease;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-.menu a.activo {
-  background-color: #0088ff;
-  border-radius: 5px;
+/* Línea elegante al pasar */
+.menu ul li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -18px; 
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 18px;
+  background: rgba(0, 0, 0, 0.4);
+}
+/* Animación hover */
+.menu ul li a:hover::after {
+  width: 100%;
+  left: 0;
 }
 
-main {
-  padding: 20px;
-  max-width: 800px;
-  margin: auto;
-  background: white;
+/* Opcional: cambio de color al hover */
+.menu ul li a:hover {
+  color: #ffd36b;
 }
+/* Ocultar checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Icono hamburguesa (oculto en PC) */
+.menu-icon {
+  display: none;
+  font-size: 32px;
+  cursor: pointer;
+  color: rgb(0, 0, 0); /* Puecuro */
+}
+
+/* ----------- Responsive Mode ----------- */
+@media (max-width: 750px) {
+
+  /* Mostrar icono */
+  .menu-icon {
+    display: block;
+  }
+
+  /* Menú se vuelve vertical y se oculta */
+  .menu ul {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(12px);
+    border-radius: 10px;
+    padding: 15px 0;
+    position: absolute;
+    top: 60px;
+    width: 80%;
+    left: 10%;
+  }
+
+  /* Cuando checkbox está activado → mostrar menú */
+  #menu-toggle:checked + .menu-icon + ul {
+    display: flex;
+  }
+}
+
 
 
 

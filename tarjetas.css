@@ -1,0 +1,133 @@
+
+
+/* Contenedor */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 60px;
+}
+
+/* Tarjeta */
+.card {
+  position: relative;
+  width: 270px;
+  background: linear-gradient(140deg, rgba(30,32,40,0.65), rgba(15,17,24,0.85));
+  border-radius: 18px;
+  overflow: hidden;
+  padding-bottom: 25px;
+  text-align: center;
+  border: 1px solid rgba(150,150,255,0.15);
+  backdrop-filter: blur(20px);
+  transition: transform .4s ease, box-shadow .4s ease;
+  cursor: pointer;
+}
+
+/* Efecto de brillo dinámico */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% -10%, rgba(120,95,255,0.6), transparent 70%);
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* Efecto hover */
+.card:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0px 18px 55px rgba(120,95,255,0.45);
+}
+
+/* Imagen con animación */
+.card-img {
+  height: 170px;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .9s ease;
+}
+
+.card:hover .card-img img {
+  transform: scale(1.22);
+}
+
+/* Texto */
+.card h2 {
+  margin-top: 18px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #dfe6ff;
+}
+
+.card p {
+  color: #adb4cf;
+  font-size: 14px;
+  padding: 0 18px;
+  margin-top: 6
+}
+
+/*noton de leer mas----------------------------------------------------------------------*/
+.btn-wow {
+  position: relative;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 1px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(120, 95, 255, 0.6);
+  backdrop-filter: blur(12px);
+  transition: 0.45s ease;
+}
+
+.btn-wow::before {
+  content: "";
+  position: absolute;
+  top: -80%;
+  left: -80%;
+  width: 260%;
+  height: 260%;
+  background: conic-gradient(#8f73ff, #c4b5ff, #8f73ff);
+  animation: spin 3.5s linear infinite;
+  opacity: 0.45;
+}
+
+.btn-wow::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background: #0e0f17;
+  border-radius: 50px;
+}
+
+.btn-wow:hover {
+  transform: scale(1.18);
+  box-shadow: 0 0 35px #b9a5ff;
+  border-color: #fff;
+}
+
+.btn-wow span {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+
