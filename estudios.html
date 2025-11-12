@@ -1,70 +1,72 @@
-<!DOCTYPE html>
+<!<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog personal David - Estudios</title>
-    <link rel="icon" href="img/ICONO D LA PAGINA.png" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Estudios</title>
+  <link rel="stylesheet" href="menuESTUDIOS.css" />
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="#">Estudios</a></li>
-            <li><a href="hobbies.html">Hobbies</a></li>
-            <li><a href="proyecto.html">Proyecto</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
-    <main>
-      <section>
-  <h2>Estudios</h2>
 
-  <article>
-    <h3>📘 Educación Primaria</h3>
-    <p>
-      Comencé mis estudios en la escuela <strong>Sixto Durán Ballén</strong>, donde cursé desde los primeros años
-      hasta <strong>7mo de Educación General Básica</strong>. 
-      En esta etapa aprendí valores fundamentales como el respeto, la amistad y la responsabilidad, además de vivir
-      experiencias que marcaron mi infancia y mi forma de relacionarme con los demás.
-    </p>
-  </article>
+  <!-- 🔹 MENÚ DE NAVEGACIÓN -->
+  <nav class="menu">
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">☰</label>
 
-  <article>
-    <h3>📗 Educación Secundaria</h3>
-    <p>
-      Al terminar la primaria, continué mis estudios en el colegio <strong>Mena del Hierro</strong>, una institución
-      particular donde estudié hasta <strong>1ro de Bachillerato</strong>. Fueron años en los que formé nuevas amistades,
-      participé en actividades y crecí tanto académica como personalmente.
-    </p>
-    <p>
-      Sin embargo, durante la pandemia la situación económica cambió y ya no fue posible continuar en esa institución.
-      Fue un momento difícil, pero también una oportunidad de adaptación.
-    </p>
-    <p>
-      Finalmente, completé mis estudios en la <strong>Unidad Educativa Aviación Civil (COTAC)</strong>, donde cursé 
-      <strong>2do y 3ro de Bachillerato</strong> y logré graduarme. Esta etapa me enseñó constancia, fortaleza y a valorar
-      cada proceso de cambio.
-    </p>
-  </article>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="estudios.html" class="activo">Estudios</a></li>
+      <li><a href="hobbies.html">Hobbies</a></li>
+      <li><a href="proyecto.html">Proyecto</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
 
-  <article>
-    <h3>📙 Educación Superior</h3>
-    <p>
-      Actualmente estudio la carrera de <strong>Negocios Digitales</strong> en la 
-      <strong>Universidad Politécnica Salesiana</strong>. 
-      Esta formación me ha permitido desarrollar conocimientos en marketing digital, gestión estratégica,
-      análisis de mercado y uso de herramientas tecnológicas para la administración y crecimiento de empresas.
-    </p>
-    <p>
-      Mi objetivo es seguir aprendiendo y aplicar mis habilidades en proyectos reales, aportando ideas nuevas,
-      soluciones prácticas y estrategias digitales que generen resultados.
-    </p>
-  </article>
+  <!-- 🔹 ENCABEZADO -->
+  <header class="header">
+    <h1>Mi Trayectoria Académica</h1>
+    <p>Descubre las etapas más importantes de mi formación educativa.</p>
+  </header>
 
-</section>
+  <!-- 🔹 TARJETAS DE ESTUDIO -->
+  <section class="cards">
+    <h2>Etapas de Estudio</h2>
+    <div class="card-container">
+      
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1601297183305-6df6c4f3f2b6?auto=format&fit=crop&w=800&q=60" alt="Primaria">
+        <h3>Primaria</h3>
+        <p>Durante esta etapa adquirí los conocimientos básicos y desarrollé mi amor por el aprendizaje y la lectura.</p>
+        <button>Leer más</button>
+      </div>
 
-        
-    </main>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=60" alt="Secundaria">
+        <h3>Secundaria</h3>
+        <p>En esta etapa fortalecí mis habilidades sociales y mi interés por la tecnología y los proyectos grupales.</p>
+        <button>Leer más</button>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=60" alt="Universidad">
+        <h3>Universidad</h3>
+        <p>Actualmente curso Negocios Digitales en la Universidad Politécnica Salesiana, enfocándome en marketing y análisis de datos.</p>
+        <button>Leer más</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔹 INFORMACIÓN EXTRA -->
+  <section class="info-extra">
+    <h2>Mi Desarrollo Académico</h2>
+    <p>La educación ha sido una parte esencial de mi crecimiento personal y profesional. A lo largo de los años, he adquirido habilidades que van más allá del aula: pensamiento crítico, liderazgo y creatividad.</p>
+    <p>Durante mi paso por diferentes instituciones, he participado en ferias, proyectos tecnológicos y actividades académicas que fortalecieron mi compromiso con la excelencia y el trabajo en equipo.</p>
+  </section>
+
+  <!-- 🔹 FOOTER -->
+  <footer>
+    <p>© 2025 Mi Portafolio — Desarrollado por David Ayo</p>
+  </footer>
+
 </body>
 </html>

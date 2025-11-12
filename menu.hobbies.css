@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+/* HEADER */
+header {
+  background-color: #000;
+  color: white;
+  padding: 25px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover, .activo {
+  color: #ffcc00;
+}
+
+/* PRESENTACIÓN */
+.presentacion {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(120deg, #ffcc00, #ffaa00);
+  color: #111;
+}
+
+.presentacion h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+/* BLOQUES DE HOBBIES */
+.bloques {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 50px 20px;
+  background-color: white;
+}
+
+.bloque {
+  background-color: #fff8e1;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 25px;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bloque:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.bloque h3 {
+  margin-bottom: 10px;
+}
+
+/* GALERÍA */
+.galeria {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f3f3f3;
+}
+
+.galeria h2 {
+  margin-bottom: 30px;
+}
+
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.tarjeta {
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-8px);
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.contenido {
+  padding: 20px;
+}
+
+.contenido h4 {
+  color: #ffaa00;
+  margin-bottom: 10px;
+}
+
+/* FRASE */
+.frase {
+  background: #111;
+  color: #ffcc00;
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 1.3em;
+  font-style: italic;
+}
+
+/* FOOTER */
+footer {
+  background-color: #000;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+}

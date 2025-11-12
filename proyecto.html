@@ -1,48 +1,90 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog personal David - Proyectos</title>
-    <link rel="icon" href="img/ICONO D LA PAGINA.png" type="image/png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyectos | Portafolio Digital</title>
+  <link rel="stylesheet" href="Proyecto.inicio.css" />
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="estudios.html">Estudios</a></li>
-            <li><a href="hobbies.html">Hobbies</a></li>
-            <li><a href="#">Proyecto</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
-    <main>
-        <h1>
-            Proyectos
-        </h1>
 
-        <section id="Primer proyextos">
-        <article>
-        <img src="img/CRM-4RG.png">
-        <h3> Proyecto Integrador - Cuarto semeste</h3>
-        <p> - Integracion de materias (Negocios Electronicos, Programacion OB)</p>
-        <p> - Creacion de una interfaz para la ayuda de la gestion de una empresa </p>
-        <a href="proyectoCRM.html">Leer mas....</a>
-        </article>
-        
-       
-        <article>
-      <section id="Ultimos proyextos"></section>
-        <h3>      ULTIMO PROYECTO     </h3>
-        <h3>      (MEGAMAXI)    </h3>
-        <img src="img/RA-PROYECTO.png">
-        <h3> Creacion de un Entorno virtual - Quinto semeste</h3>
-        <p> - Creacion de un Supermercado (MEGAMAXI - Condado Shopping)</p>
-        <p> - Proyecto de realidad aumentada que recrea el supermercado Megamaxi en un entorno virtual inmersivo y realista. </p>
-        <a href="ProyectodeRA.html">Leer mas....</a>
-        </article>
+  <!-- MENÚ -->
+  <nav class="menu">
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">☰</label>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="estudios.html">Estudios</a></li>
+      <li><a href="hobbies.html">Hobbies</a></li>
+      <li><a href="proyecto.html" class="activo">Proyecto</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
 
+  <!-- ENCABEZADO PRINCIPAL -->
+  <header class="hero">
+    <div class="textos">
+      <h1>Proyectos Digitales</h1>
+      <p>Descubre las experiencias tecnológicas que redefinen la interacción entre usuarios y entornos digitales.</p>
+    </div>
+  </header>
 
-    </main>
+  <!-- SECCIÓN DE DESCRIPCIÓN -->
+  <section class="descripcion">
+    <div class="texto">
+      <h2>Innovamos con propósito</h2>
+      <p>Desde recorridos inmersivos en 3D hasta sistemas CRM personalizados, nuestros proyectos combinan tecnología y creatividad para transformar la forma en que las empresas se conectan con sus clientes.</p>
+      <p>Creemos que cada solución digital debe ofrecer valor, eficiencia y una experiencia visual memorable.</p>
+    </div>
+    <div class="imagen">
+      <img src="equipo.jpg" alt="Equipo de desarrollo">
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE PROYECTOS -->
+  <section class="proyectos">
+    <h2>Proyectos Destacados</h2>
+    <div class="galeria">
+      <div class="proyecto">
+        <img src="megamaxi.jpg" alt="Megamaxi Inmersión">
+        <div class="info">
+          <h3>Megamaxi Inmersión</h3>
+          <p>Recorrido virtual interactivo en un entorno 3D realista.</p>
+        </div>
+      </div>
+      <div class="proyecto">
+        <img src="crm.jpg" alt="CRM Multigestión">
+        <div class="info">
+          <h3>CRM Multigestión</h3>
+          <p>Sistema inteligente para automatizar procesos comerciales.</p>
+        </div>
+      </div>
+      <div class="proyecto">
+        <img src="marketing.jpg" alt="Marketing Inmersivo">
+        <div class="info">
+          <h3>Marketing Inmersivo</h3>
+          <p>Estrategias visuales integradas con tecnología VR.</p>
+        </div>
+      </div>
+      <div class="proyecto">
+        <img src="vr.jpg" alt="Educación Virtual">
+        <div class="info">
+          <h3>Educación Virtual</h3>
+          <p>Entornos inmersivos para el aprendizaje interactivo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRASE FINAL -->
+  <section class="frase">
+    <h2>“La innovación no es solo crear, es transformar la experiencia de vivir lo digital.”</h2>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 | Portafolio Digital — David Ayo</p>
+  </footer>
+
 </body>
 </html>
