@@ -12,8 +12,8 @@
 /* Tarjeta */
 .card {
   position: relative;
-  width: 270px;
-  background: linear-gradient(140deg, rgba(30,32,40,0.65), rgba(15,17,24,0.85));
+  width: 400px;
+  background: linear-gradient(140deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85));
   border-radius: 18px;
   overflow: hidden;
   padding-bottom: 25px;
@@ -29,7 +29,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 20% -10%, rgba(120,95,255,0.6), transparent 70%);
+  background: radial-gradient(circle at 20% -10%, rgba(103, 83, 83, 0.6), transparent 40%);
   opacity: 0;
   transition: opacity .5s ease;
 }
@@ -41,15 +41,19 @@
 /* Efecto hover */
 .card:hover {
   transform: translateY(-12px) scale(1.05);
-  box-shadow: 0px 18px 55px rgba(120,95,255,0.45);
+  box-shadow: 0px 18px 55px rgba(50, 49, 54, 0.45);
 }
 
 /* Imagen con animación */
-.card-img {
-  height: 170px;
-  overflow: hidden;
-  border-bottom: 1px solid rgba(255,255,255,0.12);
+.card img {
+  width: 100%;        /* la imagen ocupa todo el ancho de la tarjeta */
+  height: 300px;      /* define el alto fijo de la imagen */
+  object-fit: cover;  /* recorta la imagen sin deformarla */
+  border-bottom: 2px solid #8f73ff;
+  border-top-left-radius: 1px;
+  border-top-right-radius: 1px;
 }
+
 
 .card-img img {
   width: 100%;
@@ -76,6 +80,13 @@
   font-size: 14px;
   padding: 0 18px;
   margin-top: 6
+}
+
+.card h3{
+  font-size: 30px;
+  font-family: 'Courier New', Courier, monospace;
+   background: linear-gradient(140deg, rgba(249, 249, 249, 0.65), rgba(0, 0, 0, 0.85));
+  color: rgba(249, 249, 249, 0.65);
 }
 
 /*noton de leer mas----------------------------------------------------------------------*/
@@ -112,12 +123,12 @@
   position: absolute;
   inset: 3px;
   background: #0e0f17;
-  border-radius: 50px;
+  border-radius: 40px;
 }
 
 .btn-wow:hover {
   transform: scale(1.18);
-  box-shadow: 0 0 35px #b9a5ff;
+  box-shadow: 0 0 35px #2c1288;
   border-color: #fff;
 }
 
