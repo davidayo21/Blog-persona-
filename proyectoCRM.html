@@ -1,101 +1,86 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog personal david Ayo - Proyectos</title>
-    <link rel="icon" href="img/ICONO D LA PAGINA.png" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiEmpresa — Innovación Digital</title>
+  <link rel="stylesheet" href="carpeta._paginas_css/paginascrm.css">
 </head>
 <body>
+  <!-- Encabezado -->
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">MiEmpresa</h1>
+      <button class="menu-btn" id="menuBtn">☰</button>
+    </div>
+  </header>
 
-    <main>
-      <h1>Manual de Usuario - Tablero de Marca (4R Global Leads)</h1>
+  <!-- Sección principal -->
+  <section class="hero">
+    <div class="container">
+      <h2>Transformamos ideas en experiencias digitales</h2>
+      <p>En MiEmpresa impulsamos la transformación digital a través del diseño, la automatización y la innovación tecnológica.</p>
+      <button class="btn" id="backBtn">← Regresar</button>
+    </div>
+  </section>
 
-        <section id="Primer proyextos">
-        <article>
-        <img src="img/CRM-4RG.png">
-        <h3> Proyecto Integrador - Cuarto semeste</h3>
-        <p> - Integracion de materias (Negocios Electronicos, Programacion OB)</p>
-        <p> - Creacion de una interfaz para la ayuda de la gestion de una empresa </p>
-        <a href="proyecto.html">ATRAS....</a>
-        </article>
+  <!-- Sección de servicios -->
+  <section class="services">
+    <div class="container">
+      <h2>Nuestros Servicios</h2>
+      <div class="cards">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800" alt="Diseño Web">
+          <h3>Diseño Web</h3>
+          <p>Desarrollamos páginas modernas, rápidas y adaptables a todo tipo de dispositivos.</p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800" alt="Automatización">
+          <h3>Automatización</h3>
+          <p>Implementamos sistemas que optimizan tus procesos y reducen costos operativos.</p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1522199710521-72d69614c702?w=800" alt="Capacitación Digital">
+          <h3>Capacitación Digital</h3>
+          <p>Ofrecemos talleres y cursos personalizados para fortalecer tus habilidades tecnológicas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <section>
-  
-  <h2>1. Introducción</h2>
-  <p>
-    El Tablero de Marca es una herramienta incluida dentro del CRM 4R Global Leads, diseñada para centralizar y 
-    administrar la identidad visual de una empresa. Desde esta sección, los usuarios pueden gestionar de manera 
-    sencilla los elementos gráficos más representativos de su marca, garantizando coherencia visual en todas sus 
-    comunicaciones corporativas.
-  </p>
-  <p>
-    Mantener una identidad visual consistente es clave para el reconocimiento y profesionalismo de la marca. 
-    Por ello, este tablero permite actualizar y organizar logos, colores y tipografías desde una única interfaz.
-  </p>
+  <!-- Sección sobre nosotros -->
+  <section class="about">
+    <div class="container about-content">
+      <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=800" alt="Equipo de trabajo">
+      <div>
+        <h2>Sobre Nosotros</h2>
+        <p>Somos un equipo apasionado por la tecnología y la innovación. Buscamos que cada empresa alcance su máximo potencial en el entorno digital mediante soluciones eficientes y creativas.</p>
+        <p>Nuestra experiencia combina diseño, programación y estrategia para ofrecer resultados medibles que generen impacto.</p>
+      </div>
+    </div>
+  </section>
 
-  <h2>2. Diseño de la Interfaz</h2>
-  <p>
-    La interfaz está dividida en módulos claramente identificados. Cada módulo contiene controles sencillos para:
-  </p>
-  <ul>
-    <li>Subir o reemplazar archivos.</li>
-    <li>Editar códigos de color.</li>
-    <li>Seleccionar y vista previa de tipografías.</li>
-  </ul>
-  <p>
-    El objetivo es que cualquier usuario, sin necesidad de conocimientos técnicos, pueda realizar cambios sin riesgo 
-    de alterar la integridad visual de la marca.
-  </p>
+  <!-- Pie de página -->
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> MiEmpresa — Innovación Digital.</p>
+    </div>
+  </footer>
 
-  <h2>3. Gestión de Logotipos</h2>
-  <p>
-    En esta sección es posible almacenar los logotipos oficiales de la empresa. Se permite subir dos versiones:
-    una versión principal y una secundaria (por ejemplo: isotipo + versión horizontal).
-  </p>
-  <ol>
-    <li>Haz clic en “Subir Logo 1” o “Subir Logo 2”.</li>
-    <li>Selecciona el archivo desde tu dispositivo (formatos recomendados: PNG, JPG o SVG).</li>
-    <li>Haz clic en “Guardar” para aplicar los cambios.</li>
-  </ol>
-  <p>
-    Se recomienda utilizar imágenes en buena resolución y fondo transparente para garantizar calidad en todos los medios.
-  </p>
+  <script>
+    // Botón regresar
+    document.getElementById('backBtn').addEventListener('click', () => {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = 'index.html';
+    });
 
-  <h2>4. Gestión de Colores</h2>
-  <p>
-    Aquí puedes crear y mantener la paleta de colores oficial de la marca. Los colores pueden registrarse mediante:
-  </p>
-  <ul>
-    <li>Código Hex (#RRGGBB)</li>
-    <li>Formato RGB (R, G, B)</li>
-  </ul>
-  <p>
-    También puedes copiar los colores ya registrados con un clic para utilizarlos en otros diseños, documentos o publicaciones.
-  </p>
+    // Año actual
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-  <h2>5. Gestión de Tipografía</h2>
-  <p>
-    La tipografía es un elemento clave en la comunicación visual. En esta sección podrás seleccionar las fuentes 
-    principales que serán utilizadas en formularios, documentos, correos y elementos visuales dentro del CRM.
-  </p>
-  <p>
-    Se recomienda trabajar con un máximo de dos o tres tipografías para mantener profesionalismo y legibilidad.
-  </p>
-
-  <h2>6. Ayuda y Soporte</h2>
-  <p>
-    Si encuentras dificultades o tienes dudas sobre cómo usar el Tablero de Marca, puedes acceder a la sección de ayuda 
-    dentro del sistema. Allí encontrarás ejemplos, guías rápidas y respuestas a preguntas frecuentes.
-  </p>
-  <p>
-    Para soporte técnico, comunícate con el administrador del CRM o el equipo responsable de implementación en la empresa.
-  </p>
-
-  <p><strong>Este manual te ayudará a configurar y mantener la identidad visual de tu marca de forma profesional y consistente.</strong></p>
-</section>
-
-
-    </main>
+    // Menú móvil (solo visual)
+    document.getElementById('menuBtn').addEventListener('click', () => {
+      alert("Menú próximamente disponible");
+    });
+  </script>
 </body>
 </html>
