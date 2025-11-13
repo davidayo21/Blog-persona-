@@ -1,76 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog personal David - Contacto</title>
-    <link rel="icon" href="img/ICONO D LA PAGINA.png" type="image/png">
-    <link rel="stylesheet" href="hojaestilos.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto</title>
+  <link rel="stylesheet" href="menu.contactos.css" />
 </head>
 <body>
+  <header>
     <nav class="menu">
-        
-            <ul>
-                <li><a href="index.html" class="activo">Inicio</a></li>
-                <li> </li> 
-                <li><a href="estudios.html">Estudios</a></li>
-                <li><a href="hobbies.html">Hobbies</a></li>
-                <li><a href="proyecto.html">Proyecto</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">☰</label>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="estudios.html">Estudios</a></li>
+        <li><a href="hobbies.html">Hobbies</a></li>
+        <li><a href="proyecto.html">Proyecto</a></li>
+        <li><a href="contacto.html" class="activo">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-      <section>
-  <h2>Contacto</h2>
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Contáctame</h1>
+      <p>Estoy disponible para proyectos, ideas o colaboraciones. ¡Hablemos!</p>
+    </div>
+  </section>
 
-  <p>
-    Soy una persona abierta a conocer gente nueva, compartir ideas y construir proyectos. 
-    Me gusta conversar, aprender y crear conexiones reales. 
-    Si deseas hablar conmigo, ya sea por un tema personal, académico o simplemente para compartir una buena conversación,
-    aquí te dejo mis redes, siempre responderé con buena vibra y respeto.
-  </p>
+  <section class="contacto">
+    <div class="info-contacto">
+      <h2>Información de contacto</h2>
+      <p>Si deseas ponerte en contacto conmigo, puedes hacerlo a través del siguiente formulario o mediante los datos que te dejo aquí.</p>
+      <ul>
+        <li>📍 Quito, Ecuador</li>
+        <li>📧 david.ayo@example.com</li>
+        <li>📞 +593 999 888 777</li>
+      </ul>
+    </div>
 
-  <div style="margin-top: 15px;">
-    <h3>Redes Sociales</h3>
-    <ul>
-      <li><strong>Instagram:</strong> 
-        <a href="https://www.instagram.com/david_21_zz/" target="_blank">@david_21_zz</a>
-        — Aquí comparto momentos de mi día a día, amigos, fútbol, viajes y cosas que disfruto.
-      </li>
+    <form class="formulario">
+      <h2>Envíame un mensaje</h2>
+      <input type="text" placeholder="Tu nombre" required>
+      <input type="email" placeholder="Tu correo" required>
+      <textarea rows="5" placeholder="Tu mensaje..." required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
 
-      <li><strong>Facebook:</strong> 
-        <a href="https://www.facebook.com/david.ayo.31542" target="_blank">David Ayo</a>
-        — Esta red es donde conecto más con familia, conocidos y recuerdos.
-      </li>
-
-      <li><strong>LinkedIn:</strong> 
-        <a href="https://www.linkedin.com/in/david-ayo-b5749124b/" target="_blank">Perfil Profesional</a>
-        — Aquí hablo sobre mi formación, proyectos, metas y crecimiento profesional.
-      </li>
-
-      <li><strong>WhatsApp:</strong> 
-        <a href="https://wa.me/593982736415" target="_blank">Enviar mensaje directo</a>
-        — Si deseas conversar de forma más rápida y cercana.
-      </li>
-    </ul>
-  </div>
-
-  <p style="margin-top: 18px;">
-    <strong>Mi forma de comunicarme:</strong> 
-    Siempre trato de ser sincero, claro y respetuoso. Me gusta escuchar y también compartir. 
-    Si me escribes, puedes tener la seguridad de que tu mensaje será leído con atención.
-  </p>
-
-  <blockquote style="margin: 16px 0; padding: 12px 18px; border-left: 4px solid #4a90e2; background: #f7f9fc; border-radius: 6px;">
-    “Un mensaje puede abrir caminos, crear amistades y cambiar días.”
-  </blockquote>
-
-  <p>
-    Así que si quieres hablar, colaborar o simplemente conocer un poco más de mí, estaré encantado de leerte 
-  </p>
-</section>
-
-    </main>
+  <footer>
+    <p>© 2025 | Página personal de David Ayo</p>
+  </footer>
 </body>
 </html>

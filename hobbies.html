@@ -7,13 +7,17 @@
   <link rel="stylesheet" href="menu.hobbies.css" />
 </head>
 <body>
-  <header>
-    <h1>Mis Hobbies</h1>
-    <nav>
+  <header class="header">
+    <h1 class="titulo">Mis Hobbies</h1>
+    <nav class="menu">
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">☰</label>
+    
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="estudios.html">Estudios</a></li>
         <li><a href="hobbies.html" class="activo">Hobbies</a></li>
+        <li><a href="proyecto.html">Proyectos</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
@@ -21,50 +25,61 @@
 
   <section class="presentacion">
     <h2>Un poco sobre mis pasatiempos</h2>
-    <p>En mi tiempo libre disfruto realizar distintas actividades que me ayudan a mantenerme activo, creativo y relajado. Me gusta equilibrar los momentos de aprendizaje con aquellos dedicados al ocio, explorando mis intereses personales y descubriendo nuevas formas de crecer.</p>
+    <p>En mi día a día, encuentro un equilibrio entre la actividad, el aprendizaje y los momentos de descanso. Disfruto mantenerme en movimiento, descubrir cosas nuevas y compartir experiencias con las personas y seres que más quiero. Mis pasatiempos reflejan ese equilibrio entre el deporte, la creatividad, el aprendizaje constante y el tiempo en familia.</p>
   </section>
 
   <section class="bloques">
+
+
+    
     <div class="bloque">
-      <h3>🎮 Videojuegos</h3>
-      <p>Los videojuegos me permiten desarrollar habilidades como la estrategia, la toma de decisiones rápidas y la creatividad. Además, me gusta compartir partidas con amigos y descubrir nuevas historias interactivas.</p>
+      <article>
+        <center> <h3>🎮 Videojuegos</h3></center>
+        <img src="img/fifa.jpg" >
+      <p> Me encanta jugar FIFA, donde puedo competir con amigos y mejorar mis habilidades en estrategia y rapidez mental. Además, disfruto aprender idiomas con Duolingo, lo que me ayuda a combinar el entretenimiento con el aprendizaje. Los videojuegos me permiten desarrollar concentración, trabajo en equipo y creatividad mientras me divierto.</p>
+    </article>
     </div>
 
-    <div class="bloque">
-      <h3>📚 Lectura</h3>
-      <p>Leer es una de mis actividades favoritas. Me apasionan los libros de tecnología, crecimiento personal y novelas de aventura. A través de la lectura, encuentro inspiración para mis propios proyectos y reflexiones sobre la vida.</p>
-    </div>
+    
 
     <div class="bloque">
-      <h3>🎵 Música</h3>
-      <p>La música me acompaña en casi todo momento. Escucho desde baladas tranquilas hasta ritmos modernos. Me gusta analizar las letras y entender cómo los artistas transmiten emociones mediante sus canciones.</p>
-    </div>
+      <article>
+         <center>  <h3>📚 Lectura</h3></center>
+         <img src="img/lectura.jpg" >
+         <p> Últimamente he estado leyendo Las 5 heridas del alma, un libro que me ha ayudado a reflexionar sobre el crecimiento personal y la superación. También disfruto leer libros de marketing, ya que me inspiran a entender mejor cómo funcionan las marcas y las estrategias para conectar con las personas. La lectura se ha vuelto una forma de aprender y mejorar cada día.</p>
+      </article>
+
+     
+     
   </section>
 
   <section class="galeria">
     <h2>Galería de Momentos</h2>
     <div class="tarjetas">
       <div class="tarjeta">
-        <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da" alt="Paseo en bicicleta">
+        <img src="img/fut.jpg" >
         <div class="contenido">
           <h4>Deporte y naturaleza</h4>
-          <p>Salir a dar paseos en bicicleta me ayuda a despejar la mente y mantenerme saludable mientras disfruto del paisaje.</p>
+          <p> Los fines de semana me gusta jugar fútbol con mis amigos, ya que me ayuda a mantenerme activo y disfrutar del momento. Durante los seis días restantes de la semana suelo hacer ejercicio al menos una hora y media diaria, lo que me permite cuidar mi salud, liberar el estrés y mantenerme con energía para mis actividades.</p>
+         <a href="hobbies.html" class="btn-wow"><span>Leer más</span></a>
         </div>
       </div>
 
       <div class="tarjeta">
-        <img src="https://images.unsplash.com/photo-1529101091764-c3526daf38fe" alt="Cocinar">
+        <img src="img/Mascota.png" >
         <div class="contenido">
-          <h4>Cocinar</h4>
-          <p>Me gusta preparar recetas nuevas los fines de semana. Cocinar me relaja y me permite compartir buenos momentos en familia.</p>
+          <h4>Pasar tiempo con mi perro</h4>
+          <p>Los fines de semana me gusta salir con mi mascota y pasar tiempo con él. Disfruto mucho esos momentos porque me ayudan a relajarme, desconectarme de la rutina y compartir tiempo de calidad al aire libre.</p>
+         <a href="hobbies.html" class="btn-wow"><span>Leer más</span></a>
         </div>
       </div>
 
       <div class="tarjeta">
-        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Fotografía">
+        <img src="img/cuenca.jpg" alt="Fotografía">
         <div class="contenido">
-          <h4>Fotografía</h4>
-          <p>Capturar momentos únicos con mi cámara o mi celular se ha convertido en una forma de expresar lo que veo y siento.</p>
+          <h4>Viajar</h4>
+          <p>Me gusta salir y pasar momentos en familia, especialmente cuando se trata de salir de paseo. En el último mes tuve la oportunidad de viajar con mi familia a Cuenca, y esos momentos se han convertido en recuerdos muy especiales para mí.</p>
+         <a href="hobbies.html" class="btn-wow"><span>Leer más</span></a>
         </div>
       </div>
     </div>
@@ -74,7 +89,7 @@
     <blockquote>“Los hobbies no solo llenan el tiempo, sino que llenan el alma.”</blockquote>
   </section>
 
-  <footer>
+  <footer class="footer">
     <p>© 2025 | Página personal de David Ayo</p>
   </footer>
 </body>

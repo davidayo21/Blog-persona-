@@ -1,4 +1,4 @@
-/* -------- RESET GENERAL -------- */
+
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +15,7 @@
   padding: 30px 0;
   backdrop-filter: relative(750px);
  
-  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+
   z-index: 10;
 }
 
@@ -38,7 +38,7 @@
 
 /* Links del menú */
 .menu ul li a {
-  color: rgb(19, 10, 10);
+  color: rgb(253, 253, 253);
   text-decoration: none;
   font-size: 18px;
   letter-spacing: 0.5px;
@@ -57,7 +57,7 @@
   transform: translateY(-50%);
   width: 2px;
   height: 38px;
-  background: rgba(12, 9, 9, 0.4);
+  background: rgba(48, 2, 2, 0.4);
 }
 /* Animación hover */
 .menu ul li a:hover::after {
@@ -67,7 +67,7 @@
 
 /* Opcional: cambio de color al hover */
 .menu ul li a:hover {
-  color: #f8f4ed;
+  color: #ffa200;
 }
 /* Ocultar checkbox */
 #menu-toggle {
@@ -77,9 +77,16 @@
 /* Icono hamburguesa (oculto en PC) */
 .menu-icon {
   display: none;
-  font-size: 32px;
-  cursor: pointer;
-  color: rgb(0, 0, 0); /* Puecuro */
+    flex-direction: column;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    border-radius: 10px;
+    padding: 15px 0;
+    position: absolute;
+    top: 60px;
+    width: 80%;
+    left: 10%;
 }
 
 
@@ -116,10 +123,13 @@
 
 /* -------- HEADER -------- */
 .header {
+     
+
   text-align: center;
-  padding: 60px 20px;
+  padding: 110px 20px;
   background-color: #111;
   color: #fff;
+  
 }
 
 /* -------- TARJETAS -------- */
@@ -147,7 +157,7 @@
 
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 15px rgba(210, 1, 1, 0.2);
 }
 
 .card img {
@@ -166,7 +176,7 @@
 .card p {
   font-size: 0.95rem;
   padding: 0 15px;
-  color: #333;
+  color: #000000;
   margin-bottom: 15px;
 }
 
@@ -206,4 +216,52 @@ footer {
     flex-direction: column;
     align-items: center;
   }
+}
+
+/*noton de leer mas----------------------------------------------------------------------*/
+.btn-wow {
+  position: relative;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 1px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(120, 95, 255, 0.6);
+  backdrop-filter: blur(12px);
+  transition: 0.45s ease;
+}
+
+.btn-wow::before {
+  content: "";
+  position: absolute;
+  top: -80%;
+  left: -80%;
+  width: 260%;
+  height: 260%;
+  background: conic-gradient(#8f73ff, #c4b5ff, #8f73ff);
+  animation: spin 3.5s linear infinite;
+  opacity: 0.45;
+}
+
+.btn-wow::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background: #0e0f17;
+  border-radius: 40px;
+}
+
+.btn-wow:hover {
+  transform: scale(1.18);
+  box-shadow: 0 0 35px #2c1288;
+  border-color: #fff;
+}
+
+.btn-wow span {
+  position: relative;
+  z-index: 2;
 }
