@@ -219,7 +219,7 @@ body {
   color: #111;
 }
 
-/* FRASE */
+/* FRASE ---------------------------------*/
 .frase {
   text-align: center;
   font-style: italic;
@@ -228,7 +228,7 @@ body {
   color: white;
 }
 
-/* FOOTER */
+/* FOOTER ----------------------------------------*/
 .footer {
   text-align: center;
   background-color: #111;
@@ -237,14 +237,14 @@ body {
   font-size: 0.9rem;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE -----------------------------------------------------------*/
 @media (max-width: 768px) {
   
   .menu-icon {
     display: block;
   }
 
-  /* Menú se vuelve vertical y se oculta */
+  /* Menú se vuelve vertical y se oculta----------------------------------------------- */
   .menu ul {
     display: none;
     flex-direction: column;
@@ -259,13 +259,13 @@ body {
     left: 10%;
   }
 
-  /* Cuando checkbox está activado → mostrar menú */
+  /* Cuando checkbox está activado → mostrar menú --------------------------------------------------*/
   #menu-toggle:checked + .menu-icon + ul {
     display: flex;
   }
 }
 
-/* Quita márgenes y define fuente */
+/* Quita márgenes y define fuente --------------------------------------------------*/
 * {
   margin: 0;
   padding: 0;
@@ -273,10 +273,10 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* Fondo del menú */
+/* Fondo del menú ---------------------------------------------------------------*/
 .navbar {
   display: flex;
-  justify-content: space-between; /* Logo izquierda, menú derecha */
+  justify-content: space-between; 
   align-items: center;
   background-color: #000000;
   padding: 10px 30px;
@@ -287,12 +287,12 @@ body {
   justify-content: center;
   align-items: flex-start;
   gap: 2rem;
-  flex-wrap: wrap; /* permite que bajen si no hay espacio */
+  flex-wrap: wrap; 
   }
 
 
 
-/* PRESENTACIÓN */
+/* PRESENTACIÓN -------------------------------------------------------------*/
 .presentacion {
   text-align: center;
   padding: 3rem 1rem;
@@ -305,7 +305,7 @@ body {
   color: #111;
 }
 
-/* BLOQUES */
+/* BLOQUES ----------------------------------------------------------------------------------*/
 .bloques {
   display: flex;
   flex-wrap: wrap;
@@ -338,7 +338,7 @@ body {
   background: #eaeaea;
 }
 
-/* GALERÍA */
+/* GALERÍA-----------------------------------------------------------------------------*/
 .galeria {
 
   text-align: center;
@@ -382,7 +382,7 @@ body {
   color: #111;
 }
 
-/* FRASE */
+/* FRASE -----------------------------------------------------------------------------*/
 .frase {
   text-align: center;
   font-style: italic;
@@ -391,7 +391,7 @@ body {
   color: white;
 }
 
-/* FOOTER */
+/* FOOTER -----------------------------------------------*/
 .footer {
   text-align: center;
   background-color: #111;
@@ -417,11 +417,11 @@ body {
 
   
 }
-/* Imagen con animación */
+/* Imagen con animación------------------------------------------------- */
 .bloque img {
-  width: 100%;        /* la imagen ocupa todo el ancho de la tarjeta */
-  height: 300px;      /* define el alto fijo de la imagen */
-  object-fit: cover;  /* recorta la imagen sin deformarla */
+  width: 100%;       
+  height: 300px;      
+  object-fit: cover;  
   border-bottom: 2px solid #060212;
   border-top-left-radius: 1px;
   border-top-right-radius: 1px;

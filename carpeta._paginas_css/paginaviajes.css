@@ -1,0 +1,255 @@
+/* --- 1. RESET Y TIPOGRAFÍA BÁSICA --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f7f6; /* Fondo suave */
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* --- 2. ENCABEZADO Y NAVEGACIÓN (HEADER & NAV) --- */
+header {
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+nav h1 {
+    font-size: 1.5em;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul a {
+    color: #2c3e50;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+nav ul a:hover {
+    background-color: #e9ecef;
+    color: #007bff;
+}
+
+/* --- 3. SECCIÓN PRINCIPAL (HERO) --- */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('hero-background.jpg'); /* Reemplaza con una imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    margin-bottom: 40px;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.1em;
+    font-weight: 400;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- 4. SECCIONES DE VIAJE (VIAJE) --- */
+.viaje {
+    padding: 60px 20px;
+    margin-bottom: 30px;
+}
+
+.viaje.cuenca {
+    background-color: #ecf0f1; /* Gris claro para Cuenca */
+}
+
+.viaje.banos {
+    background-color: #e8f6f3; /* Verde/Azul claro para Baños */
+}
+
+.content-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.viaje h3 {
+    font-size: 2em;
+    color: #2980b9; /* Color de título principal */
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.viaje-header {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #555;
+}
+
+/* --- 5. GALERÍA DE IMÁGENES --- */
+.galeria {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.imagen-principal {
+    width: 100%;
+    height: 400px; /* Altura fija para la imagen principal */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.miniaturas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.miniaturas img {
+    width: 100%;
+    height: 192.5px; /* Calculado para llenar el espacio (400 - 15) / 2 */
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.miniaturas img:hover {
+    opacity: 1;
+}
+
+/* --- 6. DETALLES DEL VIAJE --- */
+.detalles h4 {
+    color: #34495e;
+    font-size: 1.4em;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border-left: 5px solid #007bff;
+    padding-left: 10px;
+}
+
+.detalles ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.detalles ul li {
+    background: #ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    border-left: 5px solid #8e44ad; /* Color para los puntos */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.punto-interes {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.detalles p {
+    font-size: 1.1em;
+    text-align: justify;
+}
+
+/* --- 7. PIE DE PÁGINA (FOOTER) --- */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    margin-top: 50px;
+}
+
+/* --- 8. ADAPTACIÓN A MÓVILES (RESPONSIVE) --- */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    nav ul li {
+        margin: 5px 10px;
+    }
+
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr; /* Columna única en móviles */
+    }
+
+    .imagen-principal {
+        height: auto; /* Altura flexible */
+    }
+
+    .miniaturas {
+        flex-direction: row; /* Miniaturas lado a lado */
+    }
+    
+    .miniaturas img {
+        width: 50%;
+        height: auto;
+    }
+
+    .viaje-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

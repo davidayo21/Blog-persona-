@@ -181,6 +181,15 @@
   gap: 25px;
 
 }
+/* --- FOOTER --- */
+footer {
+  background-color: #530505;
+  text-align: center;
+  padding: 1.5rem 0;
+  color: #f4f4f4;
+  font-size: 0.9rem;
+  border-top: 1px solid #e6e6e6;
+}
 
 
 
