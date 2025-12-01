@@ -1,0 +1,316 @@
+
+/* Contenedor */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 60px;
+}
+
+/* Tarjeta (Elemento individual dentro de cards-container) */
+.card {
+    position: relative;
+    /* Reducimos el ancho fijo para que sea flexible */
+    width: 100%; 
+    max-width: 400px;
+    background: linear-gradient(140deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85));
+    border-radius: 18px;
+    overflow: hidden;
+    padding-bottom: 25px;
+    text-align: center;
+    border: 1px solid rgba(150,150,255,0.15);
+    backdrop-filter: blur(20px);
+    transition: transform .4s ease, box-shadow .4s ease;
+    cursor: pointer;
+}
+
+.seccion h2 {
+    gap: 12px;
+    font-size: 40px;
+    margin-bottom: 12px;
+    text-align: center; /* Aseguramos que el título esté centrado */
+}
+
+/* 1. Tarjeta de Imagen/Texto (Estilo de bienvenida) */
+.tarjeta {
+    /* Eliminamos el ancho fijo (1000px) y usamos max-width para centrar y limitar */
+    width: 90%; 
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 62px;
+    
+    padding: 65px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    font-family: Arial, sans-serif;
+
+    display: flex; /* imagen izquierda / texto derecha */
+    gap: 40px;
+    align-items: center;
+}
+
+.tarjeta img {
+    width: 40%;
+    border-radius: 10px;
+}
+
+.contenido {
+    width: 60%; /* texto a la derecha */
+}
+
+.tarjeta h3 {
+    margin: 0 0 10px;
+    font-size: 1.4rem;
+    color: #111;
+}
+
+.tarjeta p {
+    margin: 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* 2. Tarjeta de Información (con Video) */
+.info {
+    /* Eliminamos el ancho fijo (1000px) y usamos max-width para centrar y limitar */
+    width: 90%;
+    max-width: 1000px; 
+    margin: 60px auto;
+    padding: 60px;
+
+    background: linear-gradient(145deg, #ffffff, #f2f2f2);
+    border-radius: 28px;
+    border: 1px solid #e1e1e1;
+
+    display: flex;
+    flex-direction: row-reverse; /* Video a la derecha / Texto a la izquierda */
+    align-items: center;
+    gap: 50px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    font-family: "Arial", sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+}
+
+.info video {
+    width: 42%;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    object-fit: cover;
+
+}
+
+.info-texto {
+    width: 58%;
+}
+
+.info-texto h2 {
+    margin: 0 0 18px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #222;
+    letter-spacing: 0.5px;
+}
+
+.info-texto p {
+    margin: 0;
+    font-size: 1.15rem;
+    color: #555;
+    line-height: 1.65;
+}
+
+
+/* Efectos de la tarjeta principal (no requieren cambios responsive) */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% -10%, rgba(103, 83, 83, 0.6), transparent 40%);
+    opacity: 0;
+    transition: opacity .5s ease;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card:hover {
+    transform: translateY(-12px) scale(1.05);
+    box-shadow: 0px 18px 55px rgba(50, 49, 54, 0.45);
+}
+
+.card img {
+    width: 100%; 
+    height: 300px; 
+    object-fit: cover; 
+    border-bottom: 2px solid #8f73ff;
+    border-top-left-radius: 1px;
+    border-top-right-radius: 1px;
+}
+
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .9s ease;
+}
+
+.card:hover .card-img img {
+    transform: scale(1.22);
+}
+
+/* Texto de la tarjeta principal */
+.card h2 {
+    margin-top: 18px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #dfe6ff;
+}
+
+.card p {
+    color: #ffffff;
+    font-size: 14px;
+    padding: 0 18px;
+    margin-top: 6px; 
+}
+
+.card h3 {
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(140deg, rgba(249, 249, 249, 0.65), rgba(0, 0, 0, 0.85));
+    color: rgba(249, 249, 249, 0.65);
+}
+
+/* Botón de leer más */
+.btn-wow {
+    position: relative;
+    display: inline-block;
+    padding: 12px 40px;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 1px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(120, 95, 255, 0.6);
+    backdrop-filter: blur(12px);
+    transition: 0.45s ease;
+}
+
+.btn-wow::before {
+    content: "";
+    position: absolute;
+    top: -80%;
+    left: -80%;
+    width: 260%;
+    height: 260%;
+    background: conic-gradient(#8f73ff, #c4b5ff, #8f73ff);
+    animation: spin 3.5s linear infinite;
+    opacity: 0.45;
+}
+
+.btn-wow::after {
+    content: "";
+    position: absolute;
+    inset: 3px;
+    background: #0e0f17;
+    border-radius: 40px;
+}
+
+.btn-wow:hover {
+    transform: scale(1.18);
+    box-shadow: 0 0 35px #2c1288;
+    border-color: #fff;
+}
+
+.btn-wow span {
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+
+/* ================================================= */
+/* RESPONSIVE: MÓVIL Y TABLET */
+/* ================================================= */
+
+@media (max-width: 850px) {
+
+    /* Contenedor principal de tarjetas */
+    .cards-container {
+        padding: 40px 20px;
+        gap: 25px;
+    }
+    
+    /* 1. Tarjeta de Imagen/Texto: Pasa a una sola columna */
+    .tarjeta {
+        flex-direction: column; /* Apila la imagen sobre el texto */
+        padding: 30px;
+        border-radius: 30px;
+        gap: 20px;
+    }
+
+    .tarjeta img {
+        width: 100%; /* La imagen ocupa todo el ancho */
+        max-width: 350px;
+    }
+
+    .contenido {
+        width: 100%; /* El texto ocupa todo el ancho */
+        text-align: center;
+    }
+
+    /* 2. Tarjeta de Información (Video/Texto): Pasa a una sola columna */
+    .info {
+        flex-direction: column-reverse; /* Apila el video sobre el texto */
+        padding: 30px;
+        border-radius: 30px;
+        gap: 30px;
+    }
+    
+    .info video {
+        width: 100%; /* El video ocupa todo el ancho */
+        max-width: 400px;
+    }
+
+    .info-texto {
+        width: 100%; /* El texto ocupa todo el ancho */
+        text-align: center;
+    }
+    
+    .info-texto h2 {
+        font-size: 1.5rem;
+    }
+
+    .info-texto p {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+    /* Ajustes para móviles muy pequeños */
+    .seccion h2 {
+        font-size: 30px;
+    }
+
+    .tarjeta {
+        padding: 20px;
+    }
+    
+    .info {
+        padding: 20px;
+    }
+}

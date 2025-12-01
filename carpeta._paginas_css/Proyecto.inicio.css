@@ -1,0 +1,464 @@
+/* ================================================= */
+/* 1. RESET Y BASE */
+/* ================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden; 
+}
+
+/* ================================================= */
+/* 2. MENÚ FIJO (NAVBAR) */
+/* ================================================= */
+.menu {
+    position: fixed; 
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 60px;
+    padding: 12px 30px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+}
+
+.menu ul li {
+    position: relative;
+}
+
+.menu ul li a {
+    color: rgb(253, 253, 253);
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    padding: 8px 12px;
+    transition: 0.3s ease;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu ul li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -18px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 38px;
+    background: rgba(12, 9, 9, 0.4);
+}
+
+.menu ul li a:hover {
+    color: #ffa200;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: #fff;
+}
+
+
+/* 3. HERO Y TEXTO PRINCIPAL (AJUSTE DE VIDEO) */
+
+.hero {
+    background-color: #000;
+    color: hsl(0, 0%, 100%);
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding-top: 30px;
+    overflow: hidden;
+}
+
+.hero video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 1; 
+}
+
+.hero .textos {
+    max-width: 700px;
+    z-index: 2; 
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+/* 4. DESCRIPCIÓN (IMAGEN Y TEXTO - APILABLE) */
+
+.descripcion {
+    padding: 100px 20px 80px;
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    background: #fff;
+    color: #000;
+}
+
+.descripcion .texto {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.descripcion .texto h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.descripcion .texto p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.descripcion .imagen {
+    flex: 1;
+    min-width: 300px;
+    max-width: 450px;
+    text-align: center;
+    height: auto; 
+    margin: 0;
+    transform: none; 
+}
+
+.descripcion .imagen img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== PROYECTOS (GALERÍA GRID RESPONSIVE) ===== */
+.proyectos {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.proyectos h2 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 25px;
+    padding: 0 40px;
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+.proyecto {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    background: #111;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.proyecto img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    opacity: 0.9;
+    transition: 0.3s ease;
+}
+
+.proyecto:hover img {
+    opacity: 0.4;
+    transform: scale(1.05);
+}
+
+.proyecto .info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.4s ease;
+    color: #fff;
+    text-align: center;
+    width: 90%; 
+}
+
+.proyecto:hover .info {
+    opacity: 1;
+}
+
+.proyecto .info h3 {
+    font-size: 1.3em;
+    margin-bottom: 5px;
+}
+
+.proyecto .info p {
+    font-size: 0.9em;
+    color: #ddd;
+}
+
+/* 5. TARJETAS DE HERRAMIENTAS (OPCIONAL, INCLUIDAS POR SEGURIDAD) */
+.seccion-herramientas {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.tarjetas-herramientas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.tarjeta-herramienta {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-top: 5px solid #E74C3C; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; 
+    min-height: 250px;
+    padding: 25px 15px;
+    color: #444444;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.tarjeta-herramienta .titulo-herramienta {
+    font-size: 2.2em; 
+    font-weight: 700;
+    color: #E74C3C; 
+    margin-bottom: 10px;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.tarjeta-herramienta .descripcion-herramienta {
+    font-size: 0.9em;
+    color: #444444;
+    margin-top: auto; 
+}
+
+/* 6. FRASE FINAL Y FOOTER */
+.frase {
+    background: #fff;
+    color: #000;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.frase h2 {
+    font-size: 1.8em;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 0.9em;
+    width: 100%;
+}
+
+/* ===== ESTILOS DEL BOTÓN (Manteniendo el diseño original) ===== */
+.btn-wow {
+    position: relative;
+    display: inline-block;
+    padding: 12px 40px;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 1px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(120, 95, 255, 0.6);
+    backdrop-filter: blur(12px);
+    transition: 0.45s ease;
+    margin-top: 20px; 
+}
+
+.btn-wow::before {
+    content: "";
+    position: absolute;
+    top: -80%;
+    left: -80%;
+    width: 260%;
+    justify-content: center;
+    height: 260%;
+    background: conic-gradient(#8f73ff, #c4b5ff, #8f73ff);
+    animation: spin 3.5s linear infinite;
+    opacity: 0.45;
+}
+
+.btn-wow::after {
+    content: "";
+    position: absolute;
+    inset: 3px;
+    background: #0e0f17;
+    border-radius: 40px;
+}
+
+.btn-wow:hover {
+    transform: scale(1.18);
+    box-shadow: 0 0 35px #2c1288;
+    border-color: #fff;
+}
+
+.btn-wow span {
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+/* 7. MEDIA QUERIES (ADAPTACIÓN A MÓVIL) */
+
+@media (max-width: 768px) {
+    
+    .menu {
+        padding: 15px 20px; 
+        justify-content: flex-end; 
+    }
+    
+    .menu-icon {
+        display: block;
+        z-index: 1001;
+    }
+
+    .menu ul {
+        display: none; 
+        flex-direction: column;
+        width: 180px;
+        position: absolute;
+        top: 60px; 
+        right: 20px; 
+        background: rgba(0, 0, 0, 0.9);
+        backdrop-filter: blur(12px);
+        gap: 0;
+        padding: 10px; 
+        border-radius: 8px;
+    }
+    
+    /*  REGLA CLAVE CORREGIDA PARA MOSTRAR EL MENÚ  */
+    #menu-toggle:checked ~ .menu-icon ~ ul,
+    #menu-toggle:checked ~ ul { 
+        display: flex; 
+    }
+    
+    
+    .menu ul li:not(:last-child)::after {
+        display: none;
+    }
+    
+    .menu ul li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .menu ul li a {
+        display: block;
+        padding: 12px;
+    }
+
+    /* --- Hero Móvil --- */
+    .hero {
+        height: 40vh; /* Se reduce la altura en móvil */
+    }
+    .hero h1 {
+        font-size: 2em;
+    }
+    .hero p {
+        font-size: 0.9em;
+    }
+
+    /* --- Descripción Móvil --- */
+    .descripcion {
+        padding: 40px 20px;
+    }
+    .descripcion .texto {
+        text-align: center;
+        max-width: 100%; 
+    }
+    .descripcion .imagen {
+        order: -1; 
+        margin-bottom: 20px;
+    }
+    
+    /* --- Proyectos Móvil --- */
+    .proyectos h2 {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+    .galeria {
+        padding: 0 10px;
+    }
+    
+    /* --- Frase Final Móvil --- */
+    .frase {
+        padding: 50px 20px;
+    }
+    .frase h2 {
+        font-size: 1.4em;
+    }
+    
+    /* --- Footer --- */
+    footer {
+        padding: 20px 0;
+    }
+}

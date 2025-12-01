@@ -1,0 +1,311 @@
+/* ================================================= */
+/* 1. RESET Y BASE (CRÍTICO PARA ANCHO TOTAL) */
+/* ================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden; 
+}
+
+/* --- FOOTER (Asegura ancho 100% y elimina huecos) --- */
+footer {
+    background-color: #530505; 
+    text-align: center;
+    padding: 1.5rem 0;
+    color: #f4f4f4;
+    font-size: 0.9rem;
+    border-top: 1px solid #e6e6e6;
+    width: 100%; 
+    margin: 0; 
+}
+
+/* ================================================= */
+/* 2. VIDEO DE FONDO Y TEXTO OVERLAY (Sección Principal) */
+/* ================================================= */
+.fondo-video {
+    position: relative;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%; 
+}
+
+.fondo-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* TEXTO ENCIMA DEL VIDEO */
+.texto-overlay {
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    z-index: 10;
+    padding: 0 20px;
+}
+
+.texto-overlay h3 {
+    font-size: 70px;
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.1;
+}
+
+.texto-overlay p {
+    font-size: 22px;
+}
+
+
+/* ================================================= */
+/* 3. MENÚ HORIZONTAL SOBRE EL VIDEO (NAVBAR) */
+/* ================================================= */
+.menu {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    z-index: 100;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 60px;
+    padding: 12px 30px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+}
+
+.menu ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    padding: 8px 12px;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+/* Línea divisoria */
+.menu ul li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 38px;
+    background: rgba(12, 9, 9, 0.4);
+}
+
+.menu ul li a:hover {
+    color: #ffa200d9;
+}
+
+/* Ocultar checkbox y icono hamburguesa en PC */
+#menu-toggle { display: none; }
+.menu-icon {
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    right: 20px;
+    top: 30px;
+}
+
+/* 4. SECCIÓN BIENVENIDA (FLEXBOX RESPONSIVE) */
+
+.seccion-bienvenida {
+    padding: 20px 0;
+    max-width: 1200px; 
+    margin: 20px auto;
+}
+
+.seccion-bienvenida h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1C1C1C;
+}
+
+.tarjeta-principal {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 30px 2.5%; 
+    padding: 30px;
+}
+
+.contenido-bienvenida {
+    display: flex; 
+    gap: 30px; 
+    align-items: center; 
+}
+
+.contenido-bienvenida img {
+    width: 40%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.texto-bienvenida {
+    flex-grow: 1;
+}
+
+.texto-bienvenida h3 {
+    font-size: 1.8em;
+    color: #E74C3C;
+    margin-bottom: 15px;
+}
+
+.texto-bienvenida p {
+    font-size: 1em;
+    color: #444444;
+}
+
+
+/* ================================================= */
+/* 5. SECCIÓN DE EDUCACIÓN/TARJETAS (CRÍTICO: ALTURA UNIFORME) */
+/* ================================================= */
+.seccion-educacion {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+.titulo-educacion {
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.tarjetas-container {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px; 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.tarjeta-edu {
+    background-color: white; 
+    border: 1px solid #ddd;
+    border-top: 5px solid #E74C3C; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; 
+    min-height: 250px; 
+    padding: 25px 15px;
+    color: #444444;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.tarjeta-edu .number {
+    font-size: 2.2em; 
+    font-weight: 700;
+    color: #E74C3C;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.tarjeta-edu .label {
+    font-size: 0.9em;
+    color: #444444;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: auto; 
+}
+
+
+/* ================================================= */
+/* 6. RESPONSIVE MODE (MEDIA QUERIES) */
+/* ================================================= */
+
+/* --- Tablet Horizontal y Pantallas Medianas (max-width: 992px) --- */
+@media (max-width: 992px) {
+    .menu ul { gap: 30px; } 
+    .texto-overlay h3 { font-size: 50px; }
+}
+
+
+/* --- Móvil (max-width: 768px) --- */
+@media (max-width: 768px) {
+    .fondo-video { height: 550px; }
+    .texto-overlay h3 { font-size: 40px; }
+    .texto-overlay p { font-size: 18px; }
+    
+    /* Menú Hamburguesa (Se activa) */
+    .menu-icon { 
+        display: block; 
+        z-index: 101; /* Asegura que esté sobre el menú */
+    }
+    .menu { 
+        padding: 10px 20px; 
+        justify-content: flex-end; 
+    }
+    .menu ul {
+        display: none;
+        flex-direction: column;
+        width: 90%;
+        position: absolute;
+        top: 80px; 
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(6, 2, 2, 0.9);
+        backdrop-filter: blur(12px);
+        padding: 10px;
+    }
+    
+    /* REGLA CLAVE AGREGADA PARA MOSTRAR EL MENÚ AL CLICKEAR EL ICONO */
+    #menu-toggle:checked ~ .menu-icon ~ ul,
+    #menu-toggle:checked ~ ul { 
+        display: flex; 
+    }
+    /* El selector `~ .menu-icon ~ ul` es el más seguro dada tu estructura HTML */
+    
+    .menu ul li:not(:last-child)::after { display: none; }
+
+    /* 1. SECCIÓN BIENVENIDA: Apilamiento */
+    .contenido-bienvenida {
+        flex-direction: column; 
+        text-align: center;
+    }
+    .contenido-bienvenida img {
+        width: 80%; 
+        margin-bottom: 20px;
+    }
+
+    /* 2. SECCIÓN EDUCACIÓN/TARJETAS: Apilamiento */
+    .tarjetas-container {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 15px;
+    }
+    
+    .tarjeta-edu {
+        min-height: 200px; 
+    }
+}

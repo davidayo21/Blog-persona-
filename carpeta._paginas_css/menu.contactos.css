@@ -78,6 +78,7 @@
 .menu-icon {
   display: none;
   font-size: 32px;
+  justify-content: center;
   cursor: pointer;
   color: rgb(255, 255, 255); /* Puecuro */
 }

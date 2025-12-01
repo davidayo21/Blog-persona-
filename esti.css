@@ -1,0 +1,301 @@
+/* ==================================== */
+/* VARIABLES Y ESTILOS GLOBALES (ROJO, NEGRO Y BLANCO) */
+/* ==================================== */
+:root {
+    --color-acento-rojo: #E74C3C;       
+    --color-principal: #1C1C1C;         
+    --color-secundario: #444444;        
+    --color-blanco: #FFFFFF;            
+    --color-fondo-claro: #F9F9F9;       
+    --color-linea-fina: #DEDEDE;        
+    --color-acento-sutil: #C0C0C0;      
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-blanco);
+    color: var(--color-secundario);
+    line-height: 1.7;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+/* ==================================== */
+/* CABECERA (HERO SECTION)              */
+/* ==================================== */
+.hero {
+    background-color: var(--color-fondo-claro);
+    color: var(--color-principal);
+    padding: 120px 0;
+    text-align: left;
+    border-bottom: 5px solid var(--color-acento-rojo); 
+}
+
+.hero .container {
+    padding: 0;
+    max-width: 1000px;
+}
+
+.hero h1 {
+    font-size: 3.8em;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--color-principal);
+}
+
+.hero p {
+    font-size: 1.3em;
+    font-weight: 300;
+    color: var(--color-secundario);
+    max-width: 600px;
+}
+
+/* VISUAL PRINCIPAL */
+.visual-block {
+    width: 100%;
+    height: 450px;
+    margin: 40px 0;
+    background-color: var(--color-principal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.visual-block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+/* SECCIONES DE CONTENIDO GENERAL */
+.section {
+    padding: 80px 0;
+    border-bottom: 1px solid var(--color-linea-fina);
+}
+
+.section:nth-of-type(even) {
+    background-color: var(--color-fondo-claro);
+}
+
+.section h2 {
+    font-size: 2.5em;
+    color: var(--color-principal);
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section h2::before { 
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%) rotate(45deg);
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--color-acento-rojo);
+}
+
+.section h3 {
+    font-size: 1.5em;
+    color: var(--color-principal);
+    margin-top: 40px;
+    margin-bottom: 15px;
+    border-left: 5px solid var(--color-acento-rojo); 
+    padding-left: 15px;
+}
+
+/* ==================================== */
+/* TARJETAS DE RESULTADOS (MÉTRICAS)    */
+/* (ARREGLO DE CORTES Y ALINEACIÓN DE ALTURA) */
+/* ==================================== */
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.result-card {
+    background-color: var(--color-blanco);
+    padding: 30px 15px; /* Reducción de padding lateral para dar más espacio al texto */
+    border: 1px solid var(--color-linea-fina);
+    border-top: 5px solid var(--color-acento-rojo); 
+    text-align: center;
+    transition: all 0.3s ease;
+    
+    /* Propiedades para altura uniforme y contenido distribuido */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 250px; /* Aumentar ligeramente el mínimo para garantizar que el texto quepa */
+}
+
+.result-card:hover {
+    background-color: var(--color-fondo-claro);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(231, 76, 60, 0.15); 
+}
+
+.result-card .number {
+    font-size: 2.3em; /* Reducción de tamaño para asegurar que títulos largos como "AR Foundation" quepan */
+    font-weight: 700;
+    color: var(--color-acento-rojo); 
+    margin-bottom: 15px; /* Más espacio entre título y descripción */
+    line-height: 1.2;
+}
+
+.result-card .label {
+    font-size: 0.9em; /* Mantener tamaño para la descripción */
+    color: var(--color-secundario);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: auto; 
+}
+
+/* ==================================== */
+/* BLOQUE DE INFORMACIÓN CON IMAGEN     */
+/* ==================================== */
+.info-block {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 40px;
+    padding: 20px;
+    border: 1px solid var(--color-linea-fina);
+}
+
+.info-block.reverse {
+    flex-direction: row-reverse;
+}
+
+.info-block .text-content {
+    flex: 1;
+}
+
+.info-block .image-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.info-block img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: 3px solid var(--color-acento-rojo); 
+    padding: 5px;
+}
+
+/* ==================================== */
+/* PIE DE PÁGINA Y BOTÓN DE INICIO      */
+/* ==================================== */
+footer {
+    background-color: var(--color-principal); 
+    color: var(--color-linea-fina);
+    text-align: center;
+    padding: 30px 0 60px 0; /* Más padding para que el botón no quede pegado */
+    font-size: 0.9em;
+    border-top: 5px solid var(--color-acento-rojo); 
+    position: relative; /* Para posicionar el botón dentro */
+}
+
+/* Estilo para el botón de regreso al inicio */
+.btn-inicio {
+    display: inline-block;
+    background-color: var(--color-acento-rojo);
+    color: var(--color-blanco);
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    
+    /* Posicionamiento: Fijo al final del footer o flotante */
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-inicio:hover {
+    background-color: #C0392B; /* Rojo más oscuro al pasar el mouse */
+}
+
+
+/* ==================================== */
+/* RESPONSIVIDAD                        */
+/* ==================================== */
+@media (max-width: 800px) {
+    .hero {
+        padding: 80px 0;
+    }
+    .hero h1 {
+        font-size: 2.8em;
+    }
+    .visual-block {
+        height: 300px;
+    }
+    .info-block, .info-block.reverse {
+        flex-direction: column;
+    }
+    .info-block .image-content {
+        order: -1;
+    }
+    .section h2 {
+        font-size: 2em;
+        text-align: center;
+        width: 100%;
+    }
+    .section h2::before {
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+    }
+    .results-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* Más pequeño en móvil */
+        gap: 10px;
+    }
+    .result-card {
+        min-height: 200px; /* Reducción de altura mínima en móvil */
+    }
+}
+/* ==================================== */
+/* BOTÓN DE REGRESO A LA PARTE SUPERIOR */
+/* ==================================== */
+.btn-regreso-arriba {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--color-principal); /* Color de texto negro */
+    border: 1px solid var(--color-acento-sutil);
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    margin-bottom: 20px; /* Separación del botón con la siguiente sección */
+}
+
+.btn-regreso-arriba:hover {
+    background-color: var(--color-acento-rojo); /* Rojo al pasar el mouse */
+    color: var(--color-blanco);
+    border-color: var(--color-acento-rojo);
+}
